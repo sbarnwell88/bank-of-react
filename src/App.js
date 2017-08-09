@@ -62,6 +62,12 @@ class App extends Component {
     this.setState({debits});
   };
 
+  _addNewCreditToCreditList = (newCredit) => {
+    const credits = [...this.state.credits];
+    credits.push(newCredit);
+    this.setState({credits});
+  }
+
 
   render(){
 
@@ -80,7 +86,9 @@ class App extends Component {
     />)
     const creditsInAccount = () => (<CreditList
       credits={this.state.credits}
-      accountBalance={accountBalance}/>
+      accountBalance={accountBalance}
+      addNewCreditToCreditList={this._addNewCreditToCreditList}
+      />
     )
 
     return (

@@ -4,9 +4,10 @@ class Credits extends Component {
     render() {
         return(
             <div>
-                {this.props.amount}
-                {this.props.description}
-                {this.props.date}
+                <p>{this.props.amount}</p>
+                <p>{this.props.description}</p>
+                <p>{this.props.date}</p>
+                <hr/>
             </div>
         )
     }
